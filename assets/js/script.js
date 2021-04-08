@@ -1,5 +1,11 @@
 var tasks = {};
 
+// function adder(number1, number2) {
+// return number1 + number2
+// }
+
+// adder();
+
 var createTask = function (taskText, taskDate, taskList) {
   // create elements that make up a task item
   var taskLi = $("<li>").addClass("list-group-item");
@@ -35,6 +41,7 @@ var loadTasks = function () {
   $.each(tasks, function (list, arr) {
     console.log(list, arr);
     // then loop over sub-array
+    console.log(arr);
     arr.forEach(function (task) {
       createTask(task.text, task.date, list);
     });
